@@ -11,6 +11,26 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+# ----------------------------------------
+# Authentication
+# ----------------------------------------
+
+# ----------------------------------------
+# Welcome & Game Play Information
+# ----------------------------------------
+
+Route::get('/', 'WelcomeController@getIndex'); # Home
+
+Route::get('/rules', 'WelcomeController@getRules');
+Route::get('/rubric', 'WelcomeController@getRubric');
+Route::get('/points', 'WelcomeController@getPoints');
+
+
+# ----------------------------------------
+# Game specific Routes
+# ----------------------------------------
+
+
+# ----------------------------------------
+# Debugging specific routes
+# ----------------------------------------

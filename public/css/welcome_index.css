@@ -1,0 +1,64 @@
+/* http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/* End Box Sizing */
+
+/* http://mystrd.at/modern-clean-css-sticky-footer */
+html {
+    position:relative;
+    min-height:100%;
+}
+body {
+    margin:0 0 100px; /* bottom = footer height */
+}
+
+footer {
+    position: absolute;
+    left:0;
+    bottom:0;
+    height:30px;
+    width:100%;
+    background-color:#ccc;
+    text-align:center;
+    padding:5px;
+}
+/* End Sticky Footer */
+
+section, header, nav {
+    padding-left:25px;
+    padding-top:25px;
+}
+
+nav ul {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+
+.logo {
+    margin-left:25px;
+    margin-top:25px;
+}
+
+/* Style Rubric Table */
+.rubrictable {
+    border: 1px solid #D6DDE6;
+    width: 85%;
+}
+
+.rubrictable td {
+    border: 1px solid #D6DDE6;
+    padding: 0.3em;
+}
+.rubrictable th {
+    border: 1px solid #828282;
+    color: white;
+    background-color: black;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 0.3em;
+}
