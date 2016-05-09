@@ -30,6 +30,7 @@ Route::get('/points', 'WelcomeController@getPoints');
 # Game specific Routes
 # ----------------------------------------
 
+Route::get('/games/show', 'GameController@getShow');
 
 # ----------------------------------------
 # Debugging specific routes

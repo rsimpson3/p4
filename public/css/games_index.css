@@ -1,0 +1,34 @@
+
+
+#holder{
+    overflow: hidden;
+    width: 100%;
+}
+#spinner{
+    margin: 0 auto;
+    width: 894px;
+    position: relative;
+    top: -490px;
+    left: 50%;
+    margin-left: -447px;
+}
+#arrow{
+    position: relative;
+    top: -60px;
+    left: 50%;
+    margin-left: -50px;
+}
+#spinbutton {
+    position: relative;
+    top: -450px;
+
+    margin-left: 0px;
+    display:inline;
+    color: #000;
+    font-size: 2em;
+    font-weight: bold;
+    background-color:#ffffcc;
+    padding:5px;
+    margin-right:5px;
+
+}

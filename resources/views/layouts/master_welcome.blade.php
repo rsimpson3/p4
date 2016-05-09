@@ -24,7 +24,6 @@
     style='width:100px'
     alt='Wheel of Vernier Logo'>
 
-
     {{-- Yield any page specific CSS files or anything else you might want in the <head> --}}
     @yield('head')
 </head>
