@@ -2,10 +2,6 @@
 
 @section('head')
 
-    <script type="text/javascript">
-
-    </script>
-
 @stop
 
 @section('title')
@@ -24,11 +20,14 @@
                     <img id="arrow" src="/images/arrow.png">
                 </div>
 
+                <div id="taskviewer">
+                    Task View
+                </div>
                 <button id="spinbutton">
                 Spin
                 </button>
 
-                <p id="foo">
+                <p class="player-info">
                 Foo Wheel <br>
                 </p>
             </div>
@@ -65,9 +64,11 @@
                     // first spin
                     task_index = (rot/15);
                 }
-                //
+                // call task index from dbase & display task 
+                // attach text to taskviewer div
                 $("p").append("Count: "+ spin_count +" Rot = "+ rot +" task_index: "+ task_index+ "<br>");
 
+                //$( "div.taskviewer" ).replaceWith( "task: "+ task_index );
                 //save last task index, player spins where wheel landed
                 last_task_index = task_index;
                 // increment spin counter

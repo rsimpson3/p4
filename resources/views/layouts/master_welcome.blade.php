@@ -18,7 +18,7 @@
 
     <!-- logo links to homepage -->
 
-    <a href='/'>
+    <a href='/' class="logo">
     <img
     src='/images/wheel_vernier.png'
     style='width:100px'
@@ -28,15 +28,20 @@
     @yield('head')
 </head>
 <body>
+    <section>
+        <div id="main">
+            <nav>
+                <ul>
+                    <!-- Guest navigation -->
+                    <li><a href='/rules'>Game Rules</a></li>
+                    <li><a href='/rubric'>Rubric</a></li>
+                    <li><a href='/points'>Points</a></li>
+                </ul>
+            </nav>
 
-    <nav>
-        <ul>
-            <!-- Guest navigation -->
-            <li><a href='/rules'>Game Rules</a></li>
-            <li><a href='/rubric'>Rubric</a></li>
-            <li><a href='/points'>Points</a></li>
-        </ul>
-    </nav>
+            <a href='/games/show/'> PLAY </a><br>
+        </div>
+    </section>
 
     <section>
         {{-- Main page content will be yielded here --}}

@@ -14,6 +14,17 @@ class GameController extends Controller {
 
         # loads first view of wheel
         # user must be logged in to play/spin wheel
-        return view('games.index');
+        return view('games.show');
     }
+
+    public function getCreate() {
+
+        # use Task model
+        $tasks = \App\Task::all();
+        
+        # loads first view of wheel
+        # user must be logged in to play/spin wheel
+        return view('games.create');
+    }
+
 }

@@ -33,7 +33,21 @@
 
 }
 
-p {
+.player-info {
     position: relative;
     top: -450px;
+}
+
+#taskviewer {
+    position: relative;
+    top: -500px;
+    align-content: center;
+    border: solid 1px white;
+    margin: 25px;
+}
+
+p {
+    position: absolute;
+    top: -60px;
+    margin-left: 25px;
 }
