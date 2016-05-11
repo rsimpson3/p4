@@ -5,13 +5,26 @@
 @stop
 
 @section('content')
-    <h1>Tasks And Points</h1>
+    <h1>Tasks &amp; Points</h1>
 
-    <ul>
-        @foreach($tasks as $task)
-            <li>{{ $task->task }} {{$task->task_points }}</li>
-        @endforeach
-    </ul>
+    <table class="taskpointstable">
+        <thead>
+            <tr class="tablehead">
+                <th scope="col"> ID </th>
+                <th scope="col"> Task </th>
+                <th scope="col"> Points </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($tasks as $task)
+                <tr>
+                    <td> {{ $task->id }} <td>
+                    <td> {{ $task->task }} </td>
+                    <td> {{ $task->task_points }} </td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
         <!-- To get started <a href='/login'>log in</a> or <a href='/register'>register</a>. -->
 
 @stop
