@@ -51,12 +51,15 @@ class WelcomeController extends Controller {
     */
     public function getPoints() {
 
+        $tasks = \App\Task::all();
+
         # Logged in users should not see the welcome page, send them to the books index instead.
         // if(\Auth::check()) {
         //     return redirect('/books');
         // }
 
-        return view('welcome.points');
+        # pass collection to view
+        return view('welcome.points')->with('tasks',$tasks);
     }
 
 }
