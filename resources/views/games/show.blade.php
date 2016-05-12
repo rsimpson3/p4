@@ -67,6 +67,7 @@
 
             <p>
                 There are 24 tasks in the Wheel of Vernier.<br>
+                Your current skill level is [_______].
                 Select your skill level.
             </p>
 

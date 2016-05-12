@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\User;
+use App\Game;
 
 class GameController extends Controller {
 
@@ -12,9 +14,14 @@ class GameController extends Controller {
      */
     public function getShow() {
 
-        # loads first view of wheel
-        # user must be logged in to play/spin wheel
-        return view('games.show');
+        # find current user logged in
+
+        # collection object
+        $skill = \App\User::where('id', '=', '1')->get();
+
+        //dd($skill);
+
+        return view('games.show')->with('skill',$skill);
     }
 
     /**
