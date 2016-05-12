@@ -28,6 +28,10 @@
     @yield('head')
 </head>
 <body>
+    <!-- reusable flash message  -->
+    @if(Session::get('message') != null)
+        <div class='flash_message'> {{ Session::get('message') }} </div>
+    @endif
     <section>
         <div id="main">
             <nav>
@@ -36,10 +40,11 @@
                     <li><a href='/rules'>Game Rules</a></li>
                     <li><a href='/rubric'>Rubric</a></li>
                     <li><a href='/points'>Points</a></li>
+                    <li><a href='/games/show/'> PLAY </a> </li>
+
+                    </li>
                 </ul>
             </nav>
-
-            <a href='/games/show/'> PLAY </a><br>
         </div>
     </section>
 
@@ -52,6 +57,7 @@
         &copy; {{ date('Y') }} &nbsp;&nbsp;
         <a href='https://github.com/rsimpson3/p4' class='fa fa-github' target='_blank'> View on Github</a> &nbsp;&nbsp;
         <a href='http://p4.digitalbiolab.me/' class='fa fa-link' target='_blank'> View Live</a>
+         •  Version 1.0  •  Last updated: 5/12/2016
     </footer>
 
 </body>

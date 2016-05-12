@@ -52,8 +52,9 @@ class WelcomeController extends Controller {
     public function getPoints() {
 
         # use Task model
-        $tasks = \App\Task::all();
+        $tasks = \App\Task::all()->toArray();
 
+        dd($tasks);
         # Logged in users should not see the welcome page, send them to the books index instead.
         // if(\Auth::check()) {
         //     return redirect('/books');

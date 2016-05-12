@@ -20,9 +20,13 @@
                     <img id="arrow" src="/images/arrow.png">
                 </div>
 
-                <div id="taskviewer">
-                    Task View
+                <div id="task-viewer">
+                    Tasks
+                    <div id="dom-target" style="display: none;">
+
+                    </div>
                 </div>
+
                 <button id="spinbutton">
                 Spin
                 </button>
@@ -45,7 +49,7 @@
     // set variable to save last task index
     var last_task_index = 0;
     // bind clickhandler to button using jQuerymobile methods
-    $('#spinbutton').rotate({
+    jq('#spinbutton').rotate({
         bind:
         {
             "click":function(){
@@ -54,7 +58,7 @@
                 // always require 1 revolution
                 value += rot+360;
                 // rotate wheel using cumlative degrees
-                $('#image').rotate({ animateTo:value})
+                jq('#image').rotate({ animateTo:value})
 
                 // calculate wheel task index 1 - 24
                 if (last_task_index != 0) {
@@ -64,9 +68,9 @@
                     // first spin
                     task_index = (rot/15);
                 }
-                // call task index from dbase & display task 
+                // call task index from dbase & display task
                 // attach text to taskviewer div
-                $("p").append("Count: "+ spin_count +" Rot = "+ rot +" task_index: "+ task_index+ "<br>");
+                jq("p").append("Count: "+ spin_count +" Rot = "+ rot +" task_index: "+ task_index+ "<br>");
 
                 //$( "div.taskviewer" ).replaceWith( "task: "+ task_index );
                 //save last task index, player spins where wheel landed

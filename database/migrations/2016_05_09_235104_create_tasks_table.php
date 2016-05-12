@@ -28,7 +28,7 @@ class CreateTasksTable extends Migration
         $table->integer('skill_level');
         $table->time('allotted_time');
 
-    });
+        });
     }
 
     /**
@@ -38,6 +38,6 @@ class CreateTasksTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('tasks');
     }
 }

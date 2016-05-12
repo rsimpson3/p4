@@ -15,6 +15,36 @@
 # Authentication
 # ----------------------------------------
 
+# Show login form
+Route::get('/login', 'Auth\AuthController@getLogin');
+# Process login form
+Route::post('/login', 'Auth\AuthController@postLogin');
+
+# Show registration form
+Route::get('/register', 'Auth\AuthController@getRegister');
+# Process registration form
+Route::post('/register', 'Auth\AuthController@postRegister');
+
+# Process logout
+Route::get('/logout', 'Auth\AuthController@logout');
+
+# confirm if user is logged in
+Route::get('/show-login-status', function() {
+
+    # You may access the authenticated user via the Auth facade
+    $user = Auth::user();
+
+    if($user) {
+        echo 'You are logged in.';
+        dump($user->toArray());
+    } else {
+        echo 'You are not logged in.';
+    }
+
+    return;
+
+});
+
 # ----------------------------------------
 # Welcome & Game Play Information
 # ----------------------------------------

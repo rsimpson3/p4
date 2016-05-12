@@ -39,7 +39,9 @@ class GameController extends Controller {
 
     public function postCreate(Request $request) {
 
-        //dd($request->all());
+        # use Task model
+        $tasks = \App\Task::all()->toArray();
+        //dd($tasks);
 
         // Validate the request data
        $this->validate($request, [
@@ -50,7 +52,8 @@ class GameController extends Controller {
 
         # loads first view of wheel
         # user must be logged in to play/spin wheel
-        return view('games.create');
+        return view('games.create')->with('tasks',$tasks);
+
     }
 
 

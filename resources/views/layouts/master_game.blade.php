@@ -21,18 +21,24 @@
 
     <meta charset='utf-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        var jq = $.noConflict();
+    </script>
+
+
 
 </head>
 <body>
+    <!-- reusable flash message  -->
+    @if(Session::get('message') != null)
+        <div class='flash_message'> {{ Session::get('message') }} </div>
+    @endif
 
     <section>
         {{-- Main page content will be yielded here --}}
         @yield('content')
     </section>
 
-
-
-    <!-- <script src="wheelgame/platforms/ios/www/cordova.js"></script> -->
 
 </body>
 </html>
