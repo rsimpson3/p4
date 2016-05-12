@@ -31,8 +31,10 @@ Route::get('/points', 'WelcomeController@getPoints');
 # ----------------------------------------
 
 Route::get('/games/show', 'GameController@getShow');
-Route::get('/games/spin', 'GameController@getCreate');
-Route::post('/games/spin/create', 'GameController@postCreate');
+Route::post('/games/show', 'GameController@postShow');
+
+Route::get('/games/create', 'GameController@getCreate');
+Route::post('/games/create', 'GameController@postCreate');
 
 # ----------------------------------------
 # Debugging specific routes
