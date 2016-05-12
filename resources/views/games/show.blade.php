@@ -66,8 +66,8 @@
                 </div>
 
             <p>
-                There are 24 tasks on the Wheel of Vernier.<br>
-                Would you like to Play?
+                There are 24 tasks in the Wheel of Vernier.<br>
+                Select your skill level.
             </p>
 
             <button type='submit'> PLAY </button>

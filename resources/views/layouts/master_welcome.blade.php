@@ -36,13 +36,23 @@
         <div id="main">
             <nav>
                 <ul>
-                    <!-- Guest navigation -->
-                    <li><a href='/rules'>Game Rules</a></li>
-                    <li><a href='/rubric'>Rubric</a></li>
-                    <li><a href='/points'>Points</a></li>
-                    <li><a href='/games/show/'> PLAY </a> </li>
-
-                    </li>
+                    @if(Auth::check())
+                        <!-- User navigation -->
+                        <li><a href='/'>Home</a></li>
+                        <li><a href='/rules'>Game Rules</a></li>
+                        <li><a href='/rubric'>Rubric</a></li>
+                        <li><a href='/points'>Points</a></li>
+                        <li><a href='/games/show/'> PLAY </a> </li>
+                        <li><a href='/logout'>Log out</a></li>
+                    @else
+                        <!-- Guest navigation -->
+                        <li><a href='/'>Home</a></li>
+                        <li><a href='/rules'>Game Rules</a></li>
+                        <li><a href='/rubric'>Rubric</a></li>
+                        <li><a href='/points'>Points</a></li>
+                        <li><a href='/login'>Log in</a></li>
+                        <li><a href='/register'>Register</a></li>
+                    @endif
                 </ul>
             </nav>
         </div>

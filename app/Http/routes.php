@@ -60,11 +60,14 @@ Route::get('/points', 'WelcomeController@getPoints');
 # Game specific Routes
 # ----------------------------------------
 
-Route::get('/games/show', 'GameController@getShow');
-Route::post('/games/show', 'GameController@postShow');
+# Restrict game play routes to users only
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/games/show', 'GameController@getShow');
+    Route::post('/games/show', 'GameController@postShow');
 
-Route::get('/games/create', 'GameController@getCreate');
-Route::post('/games/create', 'GameController@postCreate');
+    Route::get('/games/create', 'GameController@getCreate');
+    Route::post('/games/create', 'GameController@postCreate');
+});
 
 # ----------------------------------------
 # Debugging specific routes
