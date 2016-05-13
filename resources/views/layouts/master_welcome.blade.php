@@ -8,7 +8,6 @@
     </title>
 
     <meta charset='utf-8'>
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet'>
@@ -16,24 +15,26 @@
 
     <link href='/css/welcome_index.css' type='text/css' rel='stylesheet'>
 
-
     {{-- Yield any page specific CSS files or anything else you might want in the <head> --}}
     @yield('head')
+
 </head>
 <body>
-    <!-- logo links to homepage -->
-    <header>
-        <a href='/' class="logo">
-        <img
-        src='/images/wheel_vernier.png'
-        style='width:100px'
-        alt='Wheel of Vernier Logo'>
-    </header>
-
     <!-- reusable flash message  -->
     @if(Session::get('message') != null)
         <div class='flash_message'> {{ Session::get('message') }} </div>
     @endif
+
+    <header>
+        <!-- logo links to homepage -->
+        <a href='/'>
+        <img
+        src='/images/wheel_vernier.png'
+        alt='Wheel of Vernier Logo'
+        class='logo'>
+        </a>
+    </header>
+
     <section>
         <div id="main">
             <nav>
