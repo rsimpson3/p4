@@ -15,6 +15,9 @@ class GameController extends Controller {
     public function getShow() {
 
         # find current user logged in
+        //$first_name = \Auth::get('first_name');
+
+        //dd($first_name);
 
         # collection object
         $skill = \App\User::where('id', '=', '1')->get();

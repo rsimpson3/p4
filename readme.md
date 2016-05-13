@@ -11,7 +11,7 @@ Web application for building student skills using the Vernier Connected Science 
 First working version.
 
 ## Demo
-
+https://vimeo.com/simpson3/p4
 Created with Adobe Presenter Express software.
 
 ## Details for Teaching Team

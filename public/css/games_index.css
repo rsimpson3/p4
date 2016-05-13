@@ -33,9 +33,22 @@
 
 }
 
-.player-info {
+.player-level {
     position: relative;
-    top: -450px;
+    top: -550px;
+    margin: 40px;
+}
+
+#player-info {
+    position: relative;
+    top: -50px;
+    margin: 40px;
+}
+
+#user-name {
+    position: relative;
+    top: -550px;
+    margin-left: 40px;
 }
 
 #task-viewer {
@@ -46,8 +59,14 @@
     margin: 25px;
 }
 
+#wheel-stats {
+    position: relative;
+    top: -450px;
+    margin-left: 40px;
+}
+
 p {
-    position: absolute;
-    top: -60px;
+    position: relative;
+    top: -500px;
     margin-left: 25px;
 }

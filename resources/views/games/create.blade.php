@@ -31,7 +31,7 @@
                 Spin
                 </button>
 
-                <p class="player-info">
+                <p id="wheel-stats">
                 Foo Wheel <br>
                 </p>
             </div>

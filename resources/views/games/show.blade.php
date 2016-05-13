@@ -10,7 +10,7 @@
 
 @section('content')
 
-    <h1>Would you like to play Wheel of Vernier?</h1>
+    <h1 id="main-headline">Would you like to play Wheel of Vernier?</h1>
 
     <div data-role="page" data-theme="b">
         <div role="main" class="ui-content">
@@ -20,13 +20,23 @@
                     <img id="arrow" src="/images/arrow.png">
                 </div>
             </div>
-    	</div><!-- /content -->
+    	</div><!-- /wheet content -->
+
+    <h2 id="user-name"> {{ Auth::user()->first_name }} </h2>
+
+    <div id="player-info">
+        <p>
+        There are 24 tasks in the Wheel of Vernier game.<br>
+        Your current skill level based on game results is {{ Auth::user()->skill_level_earned }}.<br> <br >
+
+        Select your skill level.</p>
+    </div>
 
         <form method='POST' action='/games/create'>
 
             {{ csrf_field() }}
 
-            <div class="player-info">
+            <div class="player-level">
                 <div class='form-group'>
                     <fieldset>
                         <legend>Skill Level:</legend>
@@ -64,12 +74,6 @@
                         </label>
                     </fieldset>
                 </div>
-
-            <p>
-                There are 24 tasks in the Wheel of Vernier.<br>
-                Your current skill level is [_______].
-                Select your skill level.
-            </p>
 
             <button type='submit'> PLAY </button>
 
