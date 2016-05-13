@@ -16,18 +16,20 @@
 
     <link href='/css/welcome_index.css' type='text/css' rel='stylesheet'>
 
-    <!-- logo links to homepage -->
-
-    <a href='/' class="logo">
-    <img
-    src='/images/wheel_vernier.png'
-    style='width:100px'
-    alt='Wheel of Vernier Logo'>
 
     {{-- Yield any page specific CSS files or anything else you might want in the <head> --}}
     @yield('head')
 </head>
 <body>
+    <!-- logo links to homepage -->
+    <header>
+        <a href='/' class="logo">
+        <img
+        src='/images/wheel_vernier.png'
+        style='width:100px'
+        alt='Wheel of Vernier Logo'>
+    </header>
+
     <!-- reusable flash message  -->
     @if(Session::get('message') != null)
         <div class='flash_message'> {{ Session::get('message') }} </div>
