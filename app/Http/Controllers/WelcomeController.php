@@ -52,7 +52,7 @@ class WelcomeController extends Controller {
     public function getPoints() {
 
         # use Task model
-        $tasks = \App\Task::all()->toArray();
+        $tasks = \App\Task::all();
 
         # pass collection to view
         return view('welcome.points')->with('tasks',$tasks);

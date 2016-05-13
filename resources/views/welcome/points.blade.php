@@ -16,13 +16,15 @@
             </tr>
         </thead>
         <tbody>
+
             @foreach($tasks as $task)
                 <tr>
-                    <td> {{ $task->id }} <td>
+                    <td> {{ $task->id }} </td>
                     <td> {{ $task->task }} </td>
                     <td> {{ $task->task_points }} </td>
                 </tr>
             @endforeach
+
         </tbody>
     </table>
         <!-- To get started <a href='/login'>log in</a> or <a href='/register'>register</a>. -->

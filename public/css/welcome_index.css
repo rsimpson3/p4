@@ -67,16 +67,16 @@ input[type="radio"] {
 }
 
 /* Style Rubric Table */
-.rubrictable {
+.taskpointstable {
     border: 1px solid #D6DDE6;
     width: 85%;
 }
 
-.rubrictable td {
+.taskpointstable td {
     border: 1px solid #D6DDE6;
     padding: 0.3em;
 }
-.rubrictable th {
+.taskpointstable th {
     border: 1px solid #828282;
     color: white;
     background-color: black;
