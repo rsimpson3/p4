@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateGamesTable extends Migration
+class CreateSkillsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,9 +12,10 @@ class CreateGamesTable extends Migration
      */
     public function up()
     {
-        Schema::create('games', function (Blueprint $table) {
+        Schema::create('skills', function (Blueprint $table) {
 
         # Increments method will make a Primary, Auto-Incrementing field.
+        # Most tables start off this way
         $table->increments('id');
 
         # This generates two columns: `created_at` and `updated_at` to
@@ -22,11 +23,11 @@ class CreateGamesTable extends Migration
         $table->timestamps();
 
         # The rest of the fields...
-        $table->integer('points_earned');
-        $table->integer('tasks_completed');
+        $table->string('skill_level');
 
-        });
+    });
     }
+
     /**
      * Reverse the migrations.
      *
@@ -34,6 +35,6 @@ class CreateGamesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('games');
+        Schema::drop('skills');
     }
 }
