@@ -26,10 +26,15 @@
 
     <div id="player-info">
         <p>
-        There are 24 tasks in the Wheel of Vernier game.<br>
-        Your current skill level based on game results is {{ Auth::user()->skill_level_earned }}.<br> <br >
+        There are 24 tasks in the Wheel of Vernier game.
 
-        Select your skill level.</p>
+        @if ($skillLevelNum != 0)
+            Your skill level is {{ $skillLevelName }} <br>
+            Select PLAY to begin a game.
+        @else
+            You are a new player. Select what you believe is your skill level.
+        @endif
+        </p>
     </div>
 
         <form method='POST' action='/games/create'>
@@ -38,40 +43,21 @@
 
             <div class="player-level">
                 <div class='form-group'>
+
                     <fieldset>
                         <legend>Skill Level:</legend>
-                        <label>
-                        <input
-                            type='radio'
-                            value='beginning'
-                            name='skill_level'
-                        >
-                        Beginning
-                        </label>
-                        <label>
-                        <input
-                            type='radio'
-                            value='novice'
-                            name='skill_level'
-                        >
-                        Novice
-                        </label>
-                        <label>
-                        <input
-                            type='radio'
-                            value='proficient'
-                            name='skill_level'
-                        >
-                        Proficient
-                        </label>
-                        <label>
-                        <input
-                            type='radio'
-                            value='Advanced'
-                            name='skill_level'
-                        >
-                        Advanced
-                        </label>
+
+                            @foreach($skills_for_radiobuttons as $skills_for_radiobutton)
+                                <label>
+                                <input
+                                    type='radio'
+                                    value='{{ $skills_for_radiobutton }}'
+                                    name='skill_level'
+                                    {{ ($skillLevelName == $skills_for_radiobutton) ? 'CHECKED' : '' }}
+                                >
+                                {{ $skills_for_radiobutton }}
+                                </label>
+                            @endforeach
                     </fieldset>
                 </div>
 

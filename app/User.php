@@ -12,7 +12,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'first_name', 'last_name','email', 'school','password'
     ];
 
     /**
@@ -24,7 +24,7 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    # users can have many games 
+    # users can have many games
     public function games() {
         return $this->hasMany('\App\Game');
     }

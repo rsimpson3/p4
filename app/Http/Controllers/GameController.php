@@ -11,20 +11,38 @@ class GameController extends Controller {
 
     /**
      * Responds to requests to GET /games/show/
+     * Only logged in players see route
      */
     public function getShow() {
 
-        # find current user logged in
-        //$first_name = \Auth::get('first_name');
+        # pull skills from skills dbase - collection object
+        // $skills = \DB::table('skills')->get();
 
-        //dd($first_name);
+        //dd($skills);
 
-        # collection object
-        $skill = \App\User::where('id', '=', '1')->get();
+        $skills_for_radiobuttons = \App\Skill::getSkillsForRadiobuttons();
 
-        //dd($skill);
+        # skill level int pulled from Users dbase
+        $skillLevelNum = \Auth::user()->skill_level_earned;
 
-        return view('games.show')->with('skill',$skill);
+        # grab skill level name for Auth user using Skill model
+
+        if ($skillLevelNum != 0 ) {
+            $skillLevelName = \App\Skill::find($skillLevelNum);
+
+            $skillLevelName = $skillLevelName->skill_level;
+            }
+        else {
+            $skillLevelName = 'New player, need to select skill level.';
+        }
+
+        //dd($skillLevelName);
+
+        # pass skills object, Auth::user skill level name & skilllevelNum
+        return view('games.show')
+            ->with('skills_for_radiobuttons',$skills_for_radiobuttons)
+            ->with('skillLevelName',$skillLevelName)
+            ->with('skillLevelNum',$skillLevelNum);
     }
 
     /**
