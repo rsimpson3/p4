@@ -1,23 +1,24 @@
-## Digital BioLab Project 4 Portfolio
+# Digital BioLab
 ## Wheel of Vernier Web App Game
-## Spring 2016
+**Spring 2016 - Version 1**
+**Winter 2017 - Version 2.0**
 
 Live URL: <http://p4.digitalbiolab.me>
 
-## Description
+### Description
 Web application for building student skills using the Vernier Connected Science System.
 
-## Updates
-First working version.
+### Updates
+Version 1 published on .
 
-## Demo
+### Demo
 https://vimeo.com/simpson3/p4
 Created with Adobe Presenter Express software.
 
-## Details for Teaching Team
+### Details for Teaching Team
 Wheel of Vernier is based on code developed during a two week bootcamp on building web applications. The orginal code used Adobe Brackets and Cordova. Cordova is not compatible with dynamic server side programming. The first part of the app is modeled on FooBooks. Game Play uses jQuery Mobile. The game is meant to be used by students on using their own mobile devices.
 
-## Outside Code
+### Outside Code
 http://jqueryrotate.com/
 
-## Code snippet
+### Code snippet
