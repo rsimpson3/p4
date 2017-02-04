@@ -1,7 +1,6 @@
 # Digital BioLab
-## Wheel of Vernier Web App Game
-**Spring 2016 - Version 1**
-**Winter 2017 - Version 2.0**
+## Wheel of Vernier Web App Game Module
+**Spring 2016 - Version 1** | **Winter 2017 - Version 2.0**
 
 Live URL: <http://p4.digitalbiolab.me>
 
@@ -9,7 +8,7 @@ Live URL: <http://p4.digitalbiolab.me>
 Web application for building student skills using the Vernier Connected Science System.
 
 ### Updates
-Version 1 published on May 12, 2016 as final project for *Dyanmic Web Applications*
+Version 1 published on May 12, 2016 as final project for *Dyanmic Web Applications*.
 
 ### Demo
 https://vimeo.com/simpson3/p4
